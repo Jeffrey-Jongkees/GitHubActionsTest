@@ -1,0 +1,18 @@
+name: Shell Commands # name of the test
+
+on: [push] # an array with events that trigger the workflow file, now only a push will trigger the workflow
+
+jobs: # is an object. Each job will run on a virtual machine
+  run-shell-command: # name of the job
+    runs-on: ubuntu-latest
+    steps: # an array of objects
+      - name: Echo a string # Naming the executing step
+        run: echo "Hello World!" # this single command will be executed. Hello World! will be 'printed'
+      - name: multiline script
+        run: | # through this pipe character, multiple commands can be executed
+          node -v
+          npm -v
+
+  
+
+  
