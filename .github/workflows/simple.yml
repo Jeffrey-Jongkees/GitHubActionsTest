@@ -19,6 +19,7 @@ jobs: # is an object. Each job will run on a virtual machine
         shell: python
   run-windows-commands: 
     runs-on: windows-latest
+    needs: ['run-shell-command'] # with 'needs', this job will be executed when the first job has finshed
     steps: 
       - name: Directory PowerShell
         run: Get-Location
