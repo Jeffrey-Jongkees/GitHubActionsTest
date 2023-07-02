@@ -3,7 +3,7 @@ name: Shell Commands # name of the test
 on: [push] # an array with events that trigger the workflow file, now only a push will trigger the workflow
 
 jobs: # is an object. Each job will run on a virtual machine
-  run-shell-command: # name of the job
+  run-shell-command: # id/name of the job
     runs-on: ubuntu-latest
     steps: # an array of objects
       - name: Echo a string # Naming the executing step
@@ -12,6 +12,19 @@ jobs: # is an object. Each job will run on a virtual machine
         run: | # through this pipe character, multiple commands can be executed
           node -v
           npm -v
+      - name: Python Command
+        run: |
+          import platform
+          print(platform.processor())
+        shell: python
+  run-windows-commands: 
+    runs-on: windows-latest
+    steps: 
+      - name: Directory PowerShell
+        run: Get-Location
+      - name: Directory Bash
+        run: pwd
+        shell: bash
 
   
 
