@@ -3,7 +3,7 @@ name: Actions Workflow
 on: 
   pull_request:
     branches:
-      - testing
+      - main
 
 jobs:
     run-github-actions:
