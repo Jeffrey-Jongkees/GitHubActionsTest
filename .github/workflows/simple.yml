@@ -3,7 +3,7 @@ name: Shell Commands # name of the test
 on: 
   pull_request: # an array with events that trigger the workflow file, now only a push will trigger the workflow
               branches: 
-               - testing
+               - main
 jobs: # is an object. Each job will run on a virtual machine
   run-shell-command: # id/name of the job
     runs-on: ubuntu-latest
