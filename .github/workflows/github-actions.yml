@@ -1,6 +1,9 @@
 name: Actions Workflow
 
-on: 
+on:
+  push:
+    branches: 
+      - testing 
   pull_request:
     branches:
       - main
