@@ -1,6 +1,6 @@
 name: Shell Commands # name of the test
 
-on: [push] # an array with events that trigger the workflow file, now only a push will trigger the workflow
+on: [pull_request] # an array with events that trigger the workflow file, now only a push will trigger the workflow
 
 jobs: # is an object. Each job will run on a virtual machine
   run-shell-command: # id/name of the job
